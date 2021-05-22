@@ -24,9 +24,9 @@ import {
   TABLE_HEADERS,
   TABLE_TOTALS,
   TABLE_THIS_ROW,
-} from "./node";
-import * as util from "./util";
-import Position from "./position";
+} from './node';
+import * as util from './util';
+import Position from './position';
 type int = number;
 type short = number;
 type byte = number;
@@ -39,8 +39,8 @@ const new_any = (n: number) => {
   return array;
 };
 
-const bisonVersion: String = "3.7.6";
-const bisonSkeleton: String = "lalr1.java";
+const bisonVersion: String = '3.7.6';
+const bisonSkeleton: String = 'lalr1.java';
 export const YYACCEPT: int = 0;
 const YYABORT: int = 1;
 export const YYPUSH_MORE: int = 4;
@@ -58,105 +58,125 @@ function yyPactValueIsDefault(yyvalue: int): boolean {
 function yyTableValueIsError(yyvalue: int): boolean {
   return yyvalue == yytable_ninf_;
 }
-const yypact_ninf_: short = -52;
+const yypact_ninf_: short = -38;
 const yytable_ninf_: byte = -1;
 const yypact_: short[] = yypact_init();
 function yypact_init(): short[] {
   return [
-    154, 154, 154, 154, 154, -52, -52, -52, -52, -52, -52, -52, -52, -52, -51, -43, -40, -8, -52,
-    -52, -16, -3, -19, 40, 229, -52, -52, -52, -52, -52, -52, -52, -52, 202, 271, 271, 271, 80, -52,
-    -14, 1, -52, 3, 4, -52, -10, 2, -52, -52, -6, -52, 22, -52, 23, -52, 154, -52, -52, 154, 154,
-    154, 154, 154, 154, 154, 154, 154, 154, 154, 154, 154, 154, -52, -52, 229, -48, -52, -52, -52,
-    -52, -52, 21, -52, -3, -3, -52, 258, 34, -52, 256, 271, 270, -52, 270, 271, -52, 71, 71, 71,
-    271, 71, 71, 71, 117, -52, 2, -52, -52, -52, -52, 154, 229, 229,
+    117, 117, 117, 117, 117, 49, 267, -38, -38, -38, -38, -38, -38, -38, -38,
+    -38, -38, 6, 12, 284, -38, -38, 4, 17, 21, -38, 160, -38, -38, -38, -38,
+    -38, -38, -38, -38, 187, 83, 83, 83, -38, -38, 20, -38, 32, -38, 30, 43,
+    -38, -9, 35, 215, -20, -38, 5, -3, -38, -38, 117, -38, -38, 117, 117, 117,
+    117, 117, 117, 117, 117, 117, 117, 117, 117, 117, -38, -38, 221, 3, 16, 267,
+    -38, 267, -38, -38, -38, -38, -38, -38, 214, 2, -38, 272, 83, 286, 214, 286,
+    83, 258, 258, 258, 83, 258, 258, 258, -38, -38, -38, 35, -38, -38, 80, 117,
+    214, 214,
   ];
 }
 const yydefact_: byte[] = yydefact_init();
 function yydefact_init(): byte[] {
   return [
-    0, 0, 0, 0, 0, 62, 63, 64, 65, 66, 30, 31, 32, 33, 27, 0, 0, 0, 44, 45, 46, 0, 0, 0, 2, 4, 25,
-    40, 41, 26, 28, 55, 57, 0, 20, 21, 22, 0, 48, 0, 0, 54, 0, 0, 38, 0, 36, 71, 58, 0, 67, 59, 61,
-    69, 1, 0, 24, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 49, 51, 0, 35, 42, 29, 43, 47, 0,
-    34, 0, 0, 56, 0, 0, 17, 10, 7, 5, 19, 6, 8, 18, 12, 16, 15, 9, 13, 11, 14, 0, 50, 37, 39, 68,
-    60, 70, 0, 52, 53,
+    0, 0, 0, 0, 0, 0, 0, 62, 63, 64, 65, 66, 30, 31, 32, 33, 27, 0, 0, 0, 44,
+    45, 47, 0, 0, 2, 3, 6, 25, 40, 41, 26, 28, 55, 57, 0, 20, 21, 22, 58, 71, 0,
+    67, 59, 61, 69, 0, 38, 0, 36, 0, 0, 54, 0, 0, 48, 1, 0, 24, 23, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 56, 0, 0, 0, 0, 34, 0, 35, 42, 29, 43, 46, 49,
+    51, 0, 19, 12, 9, 7, 4, 8, 10, 14, 18, 17, 11, 15, 13, 16, 68, 60, 70, 37,
+    39, 50, 0, 0, 52, 53,
   ];
 }
 const yypgoto_: byte[] = yypgoto_init();
 function yypgoto_init(): byte[] {
-  return [-52, -52, -1, -11, -52, -2, -52, -52, 11, -52, -52, -52, 49, 73, -52, -15, -52, 5, 6];
+  return [
+    -38, -38, -38, -1, -2, -38, -26, -38, -38, -37, -38, -38, -38, 7, 36, -38,
+    0, -38, -21, -18,
+  ];
 }
 const yydefgoto_: byte[] = yydefgoto_init();
 function yydefgoto_init(): byte[] {
-  return [0, 23, 24, 25, 45, 46, 26, 27, 28, 29, 38, 75, 30, 31, 49, 32, 51, 52, 53];
+  return [
+    0, 24, 25, 26, 27, 48, 49, 28, 29, 30, 31, 55, 88, 32, 33, 41, 34, 43, 44,
+    45,
+  ];
 }
 const yytable_: byte[] = yytable_init();
 function yytable_init(): byte[] {
   return [
-    33, 34, 35, 36, 37, 103, 39, 50, 104, 40, 44, 5, 6, 7, 8, 9, 5, 6, 7, 8, 9, 76, 5, 6, 7, 8, 9,
-    47, 17, 18, 19, 20, 10, 11, 12, 13, 74, 43, 42, 48, 54, 82, 83, 22, 18, 19, 20, 21, 80, 22, 77,
-    79, 85, 81, 88, 84, 76, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 107, 44, 106,
-    55, 86, 56, 87, 57, 58, 47, 105, 59, 60, 61, 62, 63, 64, 78, 1, 41, 108, 2, 109, 3, 68, 0, 0, 0,
-    0, 0, 4, 111, 0, 0, 0, 0, 0, 0, 112, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-    1, 0, 0, 2, 21, 3, 0, 0, 0, 0, 73, 22, 4, 0, 0, 0, 0, 0, 0, 0, 0, 5, 6, 7, 8, 9, 10, 11, 12, 13,
-    14, 15, 16, 17, 18, 19, 20, 1, 0, 0, 2, 21, 3, 0, 110, 0, 0, 0, 22, 4, 0, 0, 0, 0, 0, 0, 0, 0,
-    5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 0, 0, 0, 0, 21, 55, 0, 56, 0, 57, 58,
-    22, 72, 59, 60, 61, 62, 63, 64, 0, 65, 66, 67, 0, 0, 0, 68, 0, 0, 69, 70, 71, 55, 0, 56, 0, 57,
-    58, 0, 0, 59, 60, 61, 62, 63, 64, 0, 65, 66, 67, 0, 0, 0, 68, 0, 0, 69, 70, 71, 55, 0, 56, 0,
-    57, 0, 0, 0, 59, 60, 61, 62, 63, 64, 55, 55, 56, 56, 57, 57, 0, 68, 59, 0, 61, 61, 63, 64, 64,
-    5, 6, 7, 8, 9, 0, 68, 68, 0, 0, 0, 0, 0, 0, 0, 0, 47,
+    35, 36, 37, 38, 47, 42, 1, 86, 78, 2, 50, 3, 108, 82, 84, 109, 51, 79, 4, 5,
+    53, 56, 6, 20, 21, 22, 54, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+    20, 21, 22, 74, 23, 75, 76, 77, 80, 40, 85, 81, 106, 87, 104, 52, 89, 83,
+    105, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 39, 0, 0, 103,
+    47, 0, 107, 7, 8, 9, 10, 11, 0, 0, 57, 0, 58, 1, 59, 0, 2, 110, 3, 40, 0, 0,
+    0, 0, 0, 4, 5, 0, 0, 6, 0, 69, 111, 112, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+    16, 17, 18, 19, 20, 21, 22, 1, 23, 0, 2, 0, 3, 0, 0, 0, 0, 0, 0, 4, 5, 0, 0,
+    6, 0, 0, 0, 0, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
+    57, 23, 58, 0, 59, 60, 0, 0, 61, 62, 63, 64, 65, 0, 0, 66, 67, 68, 0, 0, 0,
+    69, 0, 0, 70, 71, 72, 57, 0, 58, 0, 59, 60, 0, 73, 61, 62, 0, 64, 65, 0, 0,
+    66, 67, 68, 0, 0, 0, 69, 0, 0, 70, 71, 72, 57, 0, 58, 0, 59, 60, 0, 0, 61,
+    62, 0, 64, 65, 0, 0, 66, 67, 68, 0, 0, 5, 69, 0, 0, 70, 71, 72, 0, 7, 8, 9,
+    10, 11, 81, 7, 8, 9, 10, 11, 0, 19, 20, 21, 22, 57, 0, 58, 0, 59, 60, 40, 0,
+    61, 62, 0, 64, 65, 0, 57, 0, 58, 0, 59, 0, 0, 69, 61, 62, 0, 64, 65, 0, 57,
+    0, 58, 6, 59, 0, 0, 69, 61, 0, 0, 0, 65, 12, 13, 14, 15, 5, 46, 0, 0, 69, 0,
+    0, 0, 7, 8, 9, 10, 11,
   ];
 }
 const yycheck_: byte[] = yycheck_init();
 function yycheck_init(): byte[] {
   return [
-    1, 2, 3, 4, 55, 53, 49, 22, 56, 49, 21, 30, 31, 32, 33, 34, 30, 31, 32, 33, 34, 35, 30, 31, 32,
-    33, 34, 46, 42, 43, 44, 45, 35, 36, 37, 38, 37, 40, 54, 58, 0, 51, 52, 57, 43, 44, 45, 50, 45,
-    57, 39, 40, 58, 49, 55, 53, 35, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 86, 83,
-    84, 3, 53, 5, 54, 7, 8, 46, 83, 11, 12, 13, 14, 15, 16, 39, 9, 17, 86, 12, 87, 14, 24, -1, -1,
-    -1, -1, -1, 21, 103, -1, -1, -1, -1, -1, -1, 110, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
-    41, 42, 43, 44, 45, 9, -1, -1, 12, 50, 14, -1, -1, -1, -1, 56, 57, 21, -1, -1, -1, -1, -1, -1,
-    -1, -1, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 9, -1, -1, 12, 50, 14,
-    -1, 53, -1, -1, -1, 57, 21, -1, -1, -1, -1, -1, -1, -1, -1, 30, 31, 32, 33, 34, 35, 36, 37, 38,
-    39, 40, 41, 42, 43, 44, 45, -1, -1, -1, -1, 50, 3, -1, 5, -1, 7, 8, 57, 10, 11, 12, 13, 14, 15,
-    16, -1, 18, 19, 20, -1, -1, -1, 24, -1, -1, 27, 28, 29, 3, -1, 5, -1, 7, 8, -1, -1, 11, 12, 13,
-    14, 15, 16, -1, 18, 19, 20, -1, -1, -1, 24, -1, -1, 27, 28, 29, 3, -1, 5, -1, 7, -1, -1, -1, 11,
-    12, 13, 14, 15, 16, 3, 3, 5, 5, 7, 7, -1, 24, 11, -1, 13, 13, 15, 16, 16, 30, 31, 32, 33, 34,
-    -1, 24, 24, -1, -1, -1, -1, -1, -1, -1, -1, 46,
+    1, 2, 3, 4, 6, 5, 9, 10, 17, 12, 4, 14, 10, 50, 51, 13, 4, 26, 21, 22, 16,
+    0, 25, 43, 44, 45, 9, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42,
+    43, 44, 45, 23, 47, 13, 16, 4, 13, 46, 45, 35, 78, 54, 75, 19, 57, 50, 76,
+    60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 23, -1, -1, 75, 78, -1,
+    80, 30, 31, 32, 33, 34, -1, -1, 3, -1, 5, 9, 7, -1, 12, 13, 14, 46, -1, -1,
+    -1, -1, -1, 21, 22, -1, -1, 25, -1, 24, 109, 110, 30, 31, 32, 33, 34, 35,
+    36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 9, 47, -1, 12, -1, 14, -1, -1, -1,
+    -1, -1, -1, 21, 22, -1, -1, 25, -1, -1, -1, -1, 30, 31, 32, 33, 34, 35, 36,
+    37, 38, 39, 40, 41, 42, 43, 44, 45, 3, 47, 5, -1, 7, 8, -1, -1, 11, 12, 13,
+    14, 15, -1, -1, 18, 19, 20, -1, -1, -1, 24, -1, -1, 27, 28, 29, 3, -1, 5,
+    -1, 7, 8, -1, 10, 11, 12, -1, 14, 15, -1, -1, 18, 19, 20, -1, -1, -1, 24,
+    -1, -1, 27, 28, 29, 3, -1, 5, -1, 7, 8, -1, -1, 11, 12, -1, 14, 15, -1, -1,
+    18, 19, 20, -1, -1, 22, 24, -1, -1, 27, 28, 29, -1, 30, 31, 32, 33, 34, 35,
+    30, 31, 32, 33, 34, -1, 42, 43, 44, 45, 3, -1, 5, -1, 7, 8, 46, -1, 11, 12,
+    -1, 14, 15, -1, 3, -1, 5, -1, 7, -1, -1, 24, 11, 12, -1, 14, 15, -1, 3, -1,
+    5, 25, 7, -1, -1, 24, 11, -1, -1, -1, 15, 35, 36, 37, 38, 22, 40, -1, -1,
+    24, -1, -1, -1, 30, 31, 32, 33, 34,
   ];
 }
 const yystos_: byte[] = yystos_init();
 function yystos_init(): byte[] {
   return [
-    0, 9, 12, 14, 21, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 50, 57, 60,
-    61, 62, 65, 66, 67, 68, 71, 72, 74, 61, 61, 61, 61, 55, 69, 49, 49, 72, 54, 40, 62, 63, 64, 46,
-    58, 73, 74, 75, 76, 77, 0, 3, 5, 7, 8, 11, 12, 13, 14, 15, 16, 18, 19, 20, 24, 27, 28, 29, 10,
-    56, 61, 70, 35, 67, 71, 67, 45, 49, 51, 52, 53, 58, 53, 54, 61, 61, 61, 61, 61, 61, 61, 61, 61,
-    61, 61, 61, 61, 61, 61, 53, 56, 64, 62, 74, 76, 77, 53, 61, 61,
+    0, 9, 12, 14, 21, 22, 25, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41,
+    42, 43, 44, 45, 47, 50, 51, 52, 53, 56, 57, 58, 59, 62, 63, 65, 52, 52, 52,
+    52, 23, 46, 64, 65, 66, 67, 68, 40, 53, 54, 55, 4, 4, 63, 16, 9, 60, 0, 3,
+    5, 7, 8, 11, 12, 13, 14, 15, 18, 19, 20, 24, 27, 28, 29, 10, 23, 13, 16, 4,
+    17, 26, 13, 35, 58, 62, 58, 45, 10, 52, 61, 52, 52, 52, 52, 52, 52, 52, 52,
+    52, 52, 52, 52, 52, 52, 65, 67, 68, 55, 53, 10, 13, 13, 52, 52,
   ];
 }
 const yyr1_: byte[] = yyr1_init();
 function yyr1_init(): byte[] {
   return [
-    0, 59, 60, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61,
-    61, 61, 61, 61, 61, 61, 62, 62, 62, 62, 62, 62, 63, 63, 64, 64, 65, 65, 66, 66, 67, 67, 67, 67,
-    68, 69, 69, 70, 70, 70, 71, 71, 72, 72, 72, 73, 73, 73, 74, 74, 74, 74, 74, 75, 75, 76, 76, 77,
+    0, 49, 50, 51, 51, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52,
+    52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 53, 53, 53, 53, 54, 54,
+    55, 55, 56, 56, 57, 57, 58, 58, 58, 58, 59, 60, 60, 61, 61, 61, 62, 62, 63,
+    63, 63, 64, 64, 64, 65, 65, 65, 65, 65, 66, 66, 67, 67, 68,
   ];
 }
 const yyr2_: byte[] = yyr2_init();
 function yyr2_init(): byte[] {
   return [
-    0, 2, 1, 3, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 1, 1, 1, 1, 3, 1, 1,
-    1, 1, 3, 3, 1, 3, 1, 3, 1, 1, 3, 3, 1, 1, 1, 3, 2, 2, 3, 1, 3, 4, 2, 1, 3, 1, 2, 1, 3, 1, 1, 1,
-    1, 1, 1, 1, 3, 1, 3, 1,
+    0, 2, 1, 1, 3, 3, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2,
+    1, 1, 1, 1, 3, 1, 1, 1, 1, 3, 3, 1, 3, 1, 3, 1, 1, 3, 3, 1, 1, 3, 1, 2, 2,
+    3, 1, 3, 4, 2, 1, 3, 1, 2, 1, 3, 1, 1, 1, 1, 1, 1, 1, 3, 1, 3, 1,
   ];
 }
 const yyrline_: short[] = yyrline_init();
 function yyrline_init(): short[] {
   return [
-    0, 96, 96, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115,
-    116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 129, 130, 131, 132, 133, 134, 138, 139, 143,
-    144, 148, 149, 153, 154, 158, 159, 160, 161, 165, 169, 170, 174, 175, 176, 180, 181, 185, 186,
-    187, 191, 192, 193, 197, 198, 199, 200, 201, 205, 206, 210, 211, 215,
+    0, 96, 96, 99, 100, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114,
+    115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 132,
+    133, 134, 135, 136, 137, 141, 142, 146, 147, 151, 152, 156, 157, 161, 162,
+    163, 164, 168, 172, 173, 177, 178, 179, 183, 184, 188, 189, 190, 194, 195,
+    196, 200, 201, 202, 203, 204, 208, 209, 213, 214, 218,
   ];
 }
 function yytranslate_(t: int): SymbolKind {
@@ -168,29 +188,32 @@ function yytranslate_(t: int): SymbolKind {
 const yytranslate_table_: byte[] = yytranslate_table_init();
 function yytranslate_table_init(): byte[] {
   return [
-    0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-    2, 49, 2, 2, 2, 2, 2, 2, 55, 56, 2, 2, 53, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 54, 52, 2, 2,
-    2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 57, 2,
-    58, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 50,
-    2, 51, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-    2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-    2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-    2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-    2, 2, 2, 2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
-    24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47,
-    48,
+    0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+    2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+    2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+    2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+    2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+    2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+    2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+    2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+    2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+    2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+    2, 2, 2, 2, 2, 2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,
+    18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
+    37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48,
   ];
 }
-const YYLAST_: int = 304;
+const YYLAST_: int = 318;
 const YYEMPTY_: int = -2;
-const YYFINAL_: int = 54;
-const YYNTOKENS_: int = 59;
+const YYFINAL_: int = 56;
+const YYNTOKENS_: int = 49;
 function i18n(s: String): String {
   return s;
 }
 export class Parser {
   yylloc_set(rhs: YYStack, n: int): Location {
-    if (0 < n) return new Location(rhs.locationAt(n - 1).begin, rhs.locationAt(0).end);
+    if (0 < n)
+      return new Location(rhs.locationAt(n - 1).begin, rhs.locationAt(0).end);
     else return new Location(rhs.locationAt(0).end);
   }
   yylexer: Lexer;
@@ -245,11 +268,13 @@ export class Parser {
   }
   yyLRGotoState(yystate: int, yysym: int): int {
     var yyr: int = yypgoto_[yysym - YYNTOKENS_] + yystate;
-    if (0 <= yyr && yyr <= YYLAST_ && yycheck_[yyr] == yystate) return yytable_[yyr];
+    if (0 <= yyr && yyr <= YYLAST_ && yycheck_[yyr] == yystate)
+      return yytable_[yyr];
     else return yydefgoto_[yysym - YYNTOKENS_];
   }
   yyaction(yyn: int, yystack: YYStack, yylen: int): int {
-    var yyval: Node = 0 < yylen ? this.yystack.valueAt(yylen - 1) : this.yystack.valueAt(0);
+    var yyval: Node =
+      0 < yylen ? this.yystack.valueAt(yylen - 1) : this.yystack.valueAt(0);
     var yyloc: Location = this.yylloc_set(yystack, yylen);
     this.yyReducePrint(yyn, yystack);
     switch (yyn) {
@@ -260,112 +285,168 @@ export class Parser {
         break;
       case 3:
         if (yyn == 3) {
-          yyval = this.yystack.valueAt(1);
+          yyval = this.yystack.valueAt(0);
         }
         break;
       case 4:
         if (yyn == 4) {
-          yyval = this.yystack.valueAt(0);
+          yyval = new InfixNode(
+            this.yystack.valueAt(2),
+            ',',
+            this.yystack.valueAt(0)
+          );
         }
         break;
       case 5:
         if (yyn == 5) {
-          yyval = new InfixNode(this.yystack.valueAt(2), "+", this.yystack.valueAt(0));
+          yyval = this.yystack.valueAt(1);
         }
         break;
       case 6:
         if (yyn == 6) {
-          yyval = new InfixNode(this.yystack.valueAt(2), "-", this.yystack.valueAt(0));
+          yyval = this.yystack.valueAt(0);
         }
         break;
       case 7:
         if (yyn == 7) {
-          yyval = new InfixNode(this.yystack.valueAt(2), "*", this.yystack.valueAt(0));
+          yyval = new InfixNode(
+            this.yystack.valueAt(2),
+            '+',
+            this.yystack.valueAt(0)
+          );
         }
         break;
       case 8:
         if (yyn == 8) {
-          yyval = new InfixNode(this.yystack.valueAt(2), "/", this.yystack.valueAt(0));
+          yyval = new InfixNode(
+            this.yystack.valueAt(2),
+            '-',
+            this.yystack.valueAt(0)
+          );
         }
         break;
       case 9:
         if (yyn == 9) {
-          yyval = new InfixNode(this.yystack.valueAt(2), "^", this.yystack.valueAt(0));
+          yyval = new InfixNode(
+            this.yystack.valueAt(2),
+            '*',
+            this.yystack.valueAt(0)
+          );
         }
         break;
       case 10:
         if (yyn == 10) {
-          yyval = new InfixNode(this.yystack.valueAt(2), "&", this.yystack.valueAt(0));
+          yyval = new InfixNode(
+            this.yystack.valueAt(2),
+            '/',
+            this.yystack.valueAt(0)
+          );
         }
         break;
       case 11:
         if (yyn == 11) {
-          yyval = new InfixNode(this.yystack.valueAt(2), "<>", this.yystack.valueAt(0));
+          yyval = new InfixNode(
+            this.yystack.valueAt(2),
+            '^',
+            this.yystack.valueAt(0)
+          );
         }
         break;
       case 12:
         if (yyn == 12) {
-          yyval = new InfixNode(this.yystack.valueAt(2), "<", this.yystack.valueAt(0));
+          yyval = new InfixNode(
+            this.yystack.valueAt(2),
+            '&',
+            this.yystack.valueAt(0)
+          );
         }
         break;
       case 13:
         if (yyn == 13) {
-          yyval = new InfixNode(this.yystack.valueAt(2), "<=", this.yystack.valueAt(0));
+          yyval = new InfixNode(
+            this.yystack.valueAt(2),
+            '<>',
+            this.yystack.valueAt(0)
+          );
         }
         break;
       case 14:
         if (yyn == 14) {
-          yyval = new InfixNode(this.yystack.valueAt(2), ">=", this.yystack.valueAt(0));
+          yyval = new InfixNode(
+            this.yystack.valueAt(2),
+            '<',
+            this.yystack.valueAt(0)
+          );
         }
         break;
       case 15:
         if (yyn == 15) {
-          yyval = new InfixNode(this.yystack.valueAt(2), ">", this.yystack.valueAt(0));
+          yyval = new InfixNode(
+            this.yystack.valueAt(2),
+            '<=',
+            this.yystack.valueAt(0)
+          );
         }
         break;
       case 16:
         if (yyn == 16) {
-          yyval = new InfixNode(this.yystack.valueAt(2), "=", this.yystack.valueAt(0));
+          yyval = new InfixNode(
+            this.yystack.valueAt(2),
+            '>=',
+            this.yystack.valueAt(0)
+          );
         }
         break;
       case 17:
         if (yyn == 17) {
-          yyval = new InfixNode(this.yystack.valueAt(2), " ", this.yystack.valueAt(0));
+          yyval = new InfixNode(
+            this.yystack.valueAt(2),
+            '>',
+            this.yystack.valueAt(0)
+          );
         }
         break;
       case 18:
         if (yyn == 18) {
-          yyval = new InfixNode(this.yystack.valueAt(2), ":", this.yystack.valueAt(0));
+          yyval = new InfixNode(
+            this.yystack.valueAt(2),
+            '=',
+            this.yystack.valueAt(0)
+          );
         }
         break;
       case 19:
         if (yyn == 19) {
-          yyval = new InfixNode(this.yystack.valueAt(2), ",", this.yystack.valueAt(0));
+          yyval = new InfixNode(
+            this.yystack.valueAt(2),
+            ' ',
+            this.yystack.valueAt(0)
+          );
         }
         break;
       case 20:
         if (yyn == 20) {
-          yyval = new PrefixNode("+", this.yystack.valueAt(0));
+          yyval = new PrefixNode('+', this.yystack.valueAt(0));
         }
         break;
       case 21:
         if (yyn == 21) {
-          yyval = new PrefixNode("-", this.yystack.valueAt(0));
+          yyval = new PrefixNode('-', this.yystack.valueAt(0));
         }
         break;
       case 22:
         if (yyn == 22) {
-          yyval = new PrefixNode("@", this.yystack.valueAt(0));
+          yyval = new PrefixNode('@', this.yystack.valueAt(0));
         }
         break;
       case 23:
         if (yyn == 23) {
-          yyval = new PostfixNode(this.yystack.valueAt(1), "%");
+          yyval = new PostfixNode(this.yystack.valueAt(1), '%');
         }
         break;
       case 24:
         if (yyn == 24) {
-          yyval = new PostfixNode(this.yystack.valueAt(1), "#");
+          yyval = new PostfixNode(this.yystack.valueAt(1), '#');
         }
         break;
       case 25:
@@ -425,7 +506,9 @@ export class Parser {
         break;
       case 36:
         if (yyn == 36) {
-          yyval = new ArrayValueNode((this.yystack.valueAt(0) as ListNode).list as ValueNode[]);
+          yyval = new ArrayValueNode(
+            (this.yystack.valueAt(0) as ListNode).list as ValueNode[]
+          );
         }
         break;
       case 37:
@@ -485,15 +568,15 @@ export class Parser {
         break;
       case 46:
         if (yyn == 46) {
-          yyval = this.yystack.valueAt(0);
-        }
-        break;
-      case 47:
-        if (yyn == 47) {
           yyval = new AreaNode(
             this.yystack.valueAt(2) as CellNode,
             this.yystack.valueAt(0) as CellNode
           );
+        }
+        break;
+      case 47:
+        if (yyn == 47) {
+          yyval = this.yystack.valueAt(0);
         }
         break;
       case 48:
@@ -535,9 +618,8 @@ export class Parser {
       case 54:
         if (yyn == 54) {
           yyval = this.yystack.valueAt(0);
-          (this.yystack.valueAt(0) as StructuredReferenceNode).table = this.yystack.valueAt(
-            1
-          ) as TableIdentifierNode;
+          (this.yystack.valueAt(0) as StructuredReferenceNode).table =
+            this.yystack.valueAt(1) as TableIdentifierNode;
         }
         break;
       case 55:
@@ -579,7 +661,10 @@ export class Parser {
         break;
       case 61:
         if (yyn == 61) {
-          yyval = new StructuredReferenceNode(0, this.yystack.valueAt(0) as TableColumnRangeNode);
+          yyval = new StructuredReferenceNode(
+            0,
+            this.yystack.valueAt(0) as TableColumnRangeNode
+          );
         }
         break;
       case 62:
@@ -622,7 +707,9 @@ export class Parser {
         break;
       case 69:
         if (yyn == 69) {
-          yyval = new TableColumnRangeNode(this.yystack.valueAt(0) as TableColumnNode);
+          yyval = new TableColumnRangeNode(
+            this.yystack.valueAt(0) as TableColumnNode
+          );
         }
         break;
       case 70:
@@ -641,24 +728,29 @@ export class Parser {
       default:
         break;
     }
-    this.yySymbolPrint("-> $$ =", SymbolKind.get(yyr1_[yyn]), yyval, yyloc);
+    this.yySymbolPrint('-> $$ =', SymbolKind.get(yyr1_[yyn]), yyval, yyloc);
     this.yystack.pop_1(yylen);
     yylen = 0;
     var yystate: int = this.yyLRGotoState(this.yystack.stateAt(0), yyr1_[yyn]);
     this.yystack.push(yystate, yyval, yyloc);
     return YYNEWSTATE;
   }
-  yySymbolPrint(s: String, yykind: SymbolKind, yyvalue: Node, yylocation: Location): void {
+  yySymbolPrint(
+    s: String,
+    yykind: SymbolKind,
+    yyvalue: Node,
+    yylocation: Location
+  ): void {
     if (0 < this.yydebug) {
       this.yycdebug(
         s +
-          (yykind.getCode() < YYNTOKENS_ ? " token " : " nterm ") +
+          (yykind.getCode() < YYNTOKENS_ ? ' token ' : ' nterm ') +
           yykind.getName() +
-          " (" +
+          ' (' +
           yylocation +
-          ": " +
-          (yyvalue == (null as any) ? "(null)" : yyvalue.toString()) +
-          ")"
+          ': ' +
+          (yyvalue == (null as any) ? '(null)' : yyvalue.toString()) +
+          ')'
       );
     }
   }
@@ -666,14 +758,14 @@ export class Parser {
     var yyloc: Location;
     if (!this.push_parse_initialized) {
       this.push_parse_initialize();
-      this.yycdebug("Starting parse");
+      this.yycdebug('Starting parse');
       this.yyerrstatus_ = 0;
     } else this.label = YYGETTOKEN;
     var push_token_consumed: boolean = true;
     for (;;)
       switch (this.label) {
         case YYNEWSTATE:
-          this.yycdebug("Entering state " + this.yystate);
+          this.yycdebug('Entering state ' + this.yystate);
           if (0 < this.yydebug) this.yystack.print(this.yyDebugStream);
           if (this.yystate == YYFINAL_) {
             this.label = YYACCEPT;
@@ -687,14 +779,19 @@ export class Parser {
         case YYGETTOKEN:
           if (this.yychar == YYEMPTY_) {
             if (!push_token_consumed) return YYPUSH_MORE;
-            this.yycdebug("Reading a token");
+            this.yycdebug('Reading a token');
             this.yychar = yylextoken;
             this.yylval = yylexval;
             this.yylloc = yylexloc;
             push_token_consumed = false;
           }
           this.yytoken = yytranslate_(this.yychar);
-          this.yySymbolPrint("Next token is", this.yytoken, this.yylval, this.yylloc);
+          this.yySymbolPrint(
+            'Next token is',
+            this.yytoken,
+            this.yylval,
+            this.yylloc
+          );
           if (this.yytoken == SymbolKind.S_YYerror) {
             this.yychar = YYUNDEF;
             this.yytoken = SymbolKind.S_YYUNDEF;
@@ -702,7 +799,11 @@ export class Parser {
             this.label = YYERRLAB1;
           } else {
             this.yyn += this.yytoken.getCode();
-            if (this.yyn < 0 || YYLAST_ < this.yyn || yycheck_[this.yyn] != this.yytoken.getCode())
+            if (
+              this.yyn < 0 ||
+              YYLAST_ < this.yyn ||
+              yycheck_[this.yyn] != this.yytoken.getCode()
+            )
               this.label = YYDEFAULT;
             else if ((this.yyn = yytable_[this.yyn]) <= 0) {
               if (yyTableValueIsError(this.yyn)) this.label = YYERRLAB;
@@ -711,7 +812,12 @@ export class Parser {
                 this.label = YYREDUCE;
               }
             } else {
-              this.yySymbolPrint("Shifting", this.yytoken, this.yylval, this.yylloc);
+              this.yySymbolPrint(
+                'Shifting',
+                this.yytoken,
+                this.yylval,
+                this.yylloc
+              );
               this.yychar = YYEMPTY_;
               if (this.yyerrstatus_ > 0) --this.yyerrstatus_;
               this.yystate = this.yyn;
@@ -734,7 +840,9 @@ export class Parser {
           if (this.yyerrstatus_ == 0) {
             ++this.yynerrs;
             if (this.yychar == YYEMPTY_) this.yytoken = null as any;
-            this.yyreportSyntaxError(new Context(this.yystack, this.yytoken, this.yylloc));
+            this.yyreportSyntaxError(
+              new Context(this.yystack, this.yytoken, this.yylloc)
+            );
           }
           this.yyerrloc = this.yylloc;
           if (this.yyerrstatus_ == 3) {
@@ -783,7 +891,12 @@ export class Parser {
           this.yystack.push(0, null as any, this.yyerrloc);
           yyloc = this.yylloc_set(this.yystack, 2);
           this.yystack.pop_1(2);
-          this.yySymbolPrint("Shifting", SymbolKind.get(yystos_[this.yyn]), this.yylval, yyloc);
+          this.yySymbolPrint(
+            'Shifting',
+            SymbolKind.get(yystos_[this.yyn]),
+            this.yylval,
+            yyloc
+          );
           this.yystate = this.yyn;
           this.yystack.push(this.yyn, this.yylval, yyloc);
           this.label = YYNEWSTATE;
@@ -822,10 +935,12 @@ export class Parser {
     if (this.yydebug == 0) return;
     var yylno: int = yyrline_[yyrule];
     var yynrhs: int = yyr2_[yyrule];
-    this.yycdebug("Reducing stack by rule " + (yyrule - 1) + " (line " + yylno + "):");
+    this.yycdebug(
+      'Reducing stack by rule ' + (yyrule - 1) + ' (line ' + yylno + '):'
+    );
     for (let yyi: int = 0; yyi < yynrhs; yyi++)
       this.yySymbolPrint(
-        "   $" + (yyi + 1) + " =",
+        '   $' + (yyi + 1) + ' =',
         SymbolKind.get(yystos_[this.yystack.stateAt(yynrhs - (yyi + 1))]),
         this.yystack.valueAt(yynrhs - (yyi + 1)),
         this.yystack.locationAt(yynrhs - (yyi + 1))
@@ -834,7 +949,10 @@ export class Parser {
 }
 export class Location {
   constructor(...args: any[]) {
-    if (args.length === 1 && (args[0] instanceof Position || args[0] === null)) {
+    if (
+      args.length === 1 &&
+      (args[0] instanceof Position || args[0] === null)
+    ) {
       this.constructor_0(args[0] as Position);
     } else if (
       args.length === 2 &&
@@ -842,7 +960,7 @@ export class Location {
       (args[1] instanceof Position || args[1] === null)
     ) {
       this.constructor_1(args[0] as Position, args[1] as Position);
-    } else throw Error("Unknown type(s)");
+    } else throw Error('Unknown type(s)');
   }
   begin!: Position;
   end!: Position;
@@ -855,7 +973,7 @@ export class Location {
   }
   toString(): String {
     if (this.begin.equals(this.end)) return this.begin.toString();
-    else return this.begin.toString() + "-" + this.end.toString();
+    else return this.begin.toString() + '-' + this.end.toString();
   }
 }
 class SymbolKind {
@@ -908,35 +1026,26 @@ class SymbolKind {
   static S_TABLE_COLUMN: SymbolKind = new SymbolKind(46);
   static S_FUNCTION_NAME: SymbolKind = new SymbolKind(47);
   static S_NEG: SymbolKind = new SymbolKind(48);
-  static S_49_: SymbolKind = new SymbolKind(49);
-  static S_50_: SymbolKind = new SymbolKind(50);
-  static S_51_: SymbolKind = new SymbolKind(51);
-  static S_52_: SymbolKind = new SymbolKind(52);
-  static S_53_: SymbolKind = new SymbolKind(53);
-  static S_54_: SymbolKind = new SymbolKind(54);
-  static S_55_: SymbolKind = new SymbolKind(55);
-  static S_56_: SymbolKind = new SymbolKind(56);
-  static S_57_: SymbolKind = new SymbolKind(57);
-  static S_58_: SymbolKind = new SymbolKind(58);
-  static S_YYACCEPT: SymbolKind = new SymbolKind(59);
-  static S_start: SymbolKind = new SymbolKind(60);
-  static S_expr: SymbolKind = new SymbolKind(61);
-  static S_constant: SymbolKind = new SymbolKind(62);
-  static S_constant_list_rows: SymbolKind = new SymbolKind(63);
-  static S_constant_list_row: SymbolKind = new SymbolKind(64);
-  static S_cell_reference: SymbolKind = new SymbolKind(65);
-  static S_external_cell_reference: SymbolKind = new SymbolKind(66);
-  static S_a1_reference: SymbolKind = new SymbolKind(67);
-  static S_function_call: SymbolKind = new SymbolKind(68);
-  static S_argument_list: SymbolKind = new SymbolKind(69);
-  static S_non_empty_argument_list: SymbolKind = new SymbolKind(70);
-  static S_structure_reference: SymbolKind = new SymbolKind(71);
-  static S_intra_table_reference: SymbolKind = new SymbolKind(72);
-  static S_inner_reference: SymbolKind = new SymbolKind(73);
-  static S_keyword: SymbolKind = new SymbolKind(74);
-  static S_keyword_list: SymbolKind = new SymbolKind(75);
-  static S_column_range: SymbolKind = new SymbolKind(76);
-  static S_column: SymbolKind = new SymbolKind(77);
+  static S_YYACCEPT: SymbolKind = new SymbolKind(49);
+  static S_start: SymbolKind = new SymbolKind(50);
+  static S_formula: SymbolKind = new SymbolKind(51);
+  static S_expression: SymbolKind = new SymbolKind(52);
+  static S_constant: SymbolKind = new SymbolKind(53);
+  static S_constant_list_rows: SymbolKind = new SymbolKind(54);
+  static S_constant_list_row: SymbolKind = new SymbolKind(55);
+  static S_cell_reference: SymbolKind = new SymbolKind(56);
+  static S_external_cell_reference: SymbolKind = new SymbolKind(57);
+  static S_a1_reference: SymbolKind = new SymbolKind(58);
+  static S_function_call: SymbolKind = new SymbolKind(59);
+  static S_argument_list: SymbolKind = new SymbolKind(60);
+  static S_non_empty_argument_list: SymbolKind = new SymbolKind(61);
+  static S_structure_reference: SymbolKind = new SymbolKind(62);
+  static S_intra_table_reference: SymbolKind = new SymbolKind(63);
+  static S_inner_reference: SymbolKind = new SymbolKind(64);
+  static S_keyword: SymbolKind = new SymbolKind(65);
+  static S_keyword_list: SymbolKind = new SymbolKind(66);
+  static S_column_range: SymbolKind = new SymbolKind(67);
+  static S_column: SymbolKind = new SymbolKind(68);
   yycode_: int;
   constructor(n: int) {
     this.yycode_ = n;
@@ -991,19 +1100,10 @@ class SymbolKind {
     SymbolKind.S_TABLE_COLUMN,
     SymbolKind.S_FUNCTION_NAME,
     SymbolKind.S_NEG,
-    SymbolKind.S_49_,
-    SymbolKind.S_50_,
-    SymbolKind.S_51_,
-    SymbolKind.S_52_,
-    SymbolKind.S_53_,
-    SymbolKind.S_54_,
-    SymbolKind.S_55_,
-    SymbolKind.S_56_,
-    SymbolKind.S_57_,
-    SymbolKind.S_58_,
     SymbolKind.S_YYACCEPT,
     SymbolKind.S_start,
-    SymbolKind.S_expr,
+    SymbolKind.S_formula,
+    SymbolKind.S_expression,
     SymbolKind.S_constant,
     SymbolKind.S_constant_list_rows,
     SymbolKind.S_constant_list_row,
@@ -1030,84 +1130,75 @@ class SymbolKind {
   static yynames_: String[] = SymbolKind.yynames_init();
   static yynames_init(): String[] {
     return [
-      i18n("end of file"),
-      i18n("error"),
-      i18n("invalid token"),
-      " ",
-      "!",
-      "#",
-      "$",
-      "%",
-      "&",
-      "(",
-      ")",
-      "*",
-      "+",
-      ",",
-      "-",
-      "/",
-      ":",
-      ";",
-      "<",
-      "=",
-      ">",
-      "@",
-      "[",
-      "]",
-      "^",
-      "{",
-      "}",
-      "<=",
-      "<>",
-      ">=",
-      "[#All]",
-      "[#Data]",
-      "[#Headers]",
-      "[#Totals]",
-      "[#This Row]",
-      i18n("error constant"),
-      i18n("logical constant"),
-      i18n("numeric constant"),
-      i18n("string constant"),
-      i18n("name"),
-      i18n("single sheet"),
-      i18n("sheet range"),
-      i18n("table identifier"),
-      i18n("column range"),
-      i18n("row range"),
-      i18n("cell"),
-      i18n("table column"),
-      i18n("function name"),
-      "NEG",
-      "'!'",
-      "'{'",
-      "'}'",
-      "';'",
-      "','",
-      "':'",
-      "'('",
-      "')'",
-      "'['",
-      "']'",
-      "$accept",
-      "start",
-      "expr",
-      "constant",
-      "constant_list_rows",
-      "constant_list_row",
-      "cell_reference",
-      "external_cell_reference",
-      "a1_reference",
-      "function_call",
-      "argument_list",
-      "non_empty_argument_list",
-      "structure_reference",
-      "intra_table_reference",
-      "inner_reference",
-      "keyword",
-      "keyword_list",
-      "column_range",
-      "column",
+      i18n('end of file'),
+      i18n('error'),
+      i18n('invalid token'),
+      ' ',
+      '!',
+      '#',
+      '$',
+      '%',
+      '&',
+      '(',
+      ')',
+      '*',
+      '+',
+      ',',
+      '-',
+      '/',
+      ':',
+      ';',
+      '<',
+      '=',
+      '>',
+      '@',
+      '[',
+      ']',
+      '^',
+      '{',
+      '}',
+      '<=',
+      '<>',
+      '>=',
+      '[#All]',
+      '[#Data]',
+      '[#Headers]',
+      '[#Totals]',
+      '[#This Row]',
+      i18n('error constant'),
+      i18n('logical constant'),
+      i18n('numeric constant'),
+      i18n('string constant'),
+      i18n('name'),
+      i18n('single sheet'),
+      i18n('sheet range'),
+      i18n('table identifier'),
+      i18n('column range'),
+      i18n('row range'),
+      i18n('cell'),
+      i18n('table column'),
+      i18n('function name'),
+      'NEG',
+      '$accept',
+      'start',
+      'formula',
+      'expression',
+      'constant',
+      'constant_list_rows',
+      'constant_list_row',
+      'cell_reference',
+      'external_cell_reference',
+      'a1_reference',
+      'function_call',
+      'argument_list',
+      'non_empty_argument_list',
+      'structure_reference',
+      'intra_table_reference',
+      'inner_reference',
+      'keyword',
+      'keyword_list',
+      'column_range',
+      'column',
       null as any,
     ];
   }
@@ -1198,8 +1289,18 @@ class YYStack {
   }
   pop_1(num: int): void {
     if (0 < num) {
-      util.fill(this.valueStack, this.height - num + 1, this.height + 1, null as any);
-      util.fill(this.locStack, this.height - num + 1, this.height + 1, null as any);
+      util.fill(
+        this.valueStack,
+        this.height - num + 1,
+        this.height + 1,
+        null as any
+      );
+      util.fill(
+        this.locStack,
+        this.height - num + 1,
+        this.height + 1,
+        null as any
+      );
     }
     this.height -= num;
   }
@@ -1213,9 +1314,9 @@ class YYStack {
     return this.valueStack[this.height - i];
   }
   print(out: util.PrintStream): void {
-    out.print("Stack now");
+    out.print('Stack now');
     for (let i: int = 0; i <= this.height; i++) {
-      out.print(" ");
+      out.print(' ');
       out.print(this.stateStack[i]);
     }
     out.println();
