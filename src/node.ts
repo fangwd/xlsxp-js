@@ -319,11 +319,11 @@ export class StructuredReferenceNode extends Node {
 }
 
 export class FunctionCallNode extends Node {
-  name: Node;
+  name: NameNode;
   args: ListNode;
   constructor(name: Node, args: ListNode) {
     super(Kind.FCALL);
-    this.name = name;
+    this.name = name as NameNode;
     this.args = args;
   }
 }

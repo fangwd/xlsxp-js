@@ -1,12 +1,19 @@
-import { parse } from "./index";
+import { FunctionCallNode, parse } from "./index";
 import { CellNode, InfixNode, Kind, Node, NumberValueNode } from "./node";
 
-test("smoke", () => {
+test("plus", () => {
   const node = parse("A1+B2") as InfixNode;
   expect(node.kind).toBe(Kind.INFIX);
   expect(node.op).toBe("+");
   expect(node.lhs).toEqual(new CellNode(1, 1));
   expect(node.rhs).toEqual(new CellNode(2, 2));
+});
+
+test("fcall", () => {
+  const node = parse("IF(A2=”Yes”,1,2)") as FunctionCallNode;
+  expect(node.kind).toBe(Kind.FCALL);
+  expect(node.name.name).toBe("IF");
+  expect(node.args.list.length).toBe(3);
 });
 
 test("evaluate", () => {
