@@ -2,7 +2,7 @@
 
 An Excel formula parser in javascript/typescript.
 
-See [grammar.txt](https://github.com/fangwd/xlsxp-js/blob/master/grammar.txt) for the detailed formula syntax. The file is part of the [official](https://docs.microsoft.com/en-us/openspecs/office_standards/ms-xlsx/3d025add-118d-4413-9856-ab65712ec1b0) Excel formula syntax.
+See [grammar.txt](https://github.com/fangwd/xlsxp-js/blob/master/grammar.txt) for the detailed formula syntax. An official version of the Excel formula syntax can be found [here](https://docs.microsoft.com/en-us/openspecs/office_standards/ms-xlsx/3d025add-118d-4413-9856-ab65712ec1b0).
 
 ## Usage
 
